@@ -1,0 +1,21 @@
+Prefix pipelines/DL_WaLeF/
+
+###############################################################################
+# TRAIN
+#Plugin CNN_MAE inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin LR inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin LSTM_MAE inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin MLP_MAE inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin RCNN inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin RF inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin RNN_MAE inputfile data/Merged-update_hourly.csv outputfile output/
+#Plugin SVR inputfile data/Merged-update_hourly.csv outputfile output/
+###############################################################################
+
+###############################################################################
+# POST-PROCES
+#Plugin MAE inputfile output/ outputfile none
+Plugin PlotMultipleML inputfile parameters.S1.txt outputfile figures/11-1.png
+Plugin PlotMultipleML inputfile parameters.S25A.txt outputfile figures/11-2.png
+Plugin PlotMultipleML inputfile parameters.S25B.txt outputfile figures/11-3.png
+Plugin PlotMultipleML inputfile parameters.S26.txt outputfile figures/11-4.png
